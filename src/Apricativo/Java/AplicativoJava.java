@@ -14,7 +14,7 @@ public class AplicativoJava {
 		Caminhao caminhao = new Caminhao();
 		Moto moto = new Moto();
 		
-		carro.setMotor(Motor.LIGADO);
+		carro.setMotor(Motor.DESLIGADO);
 		carro.acelerar(carro.getVelocidadeAtual());
 		carro.acelerar(carro.getVelocidadeAtual());
 

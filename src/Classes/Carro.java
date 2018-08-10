@@ -19,12 +19,14 @@ public class Carro extends Automoveis {
 	}
 	
 	public Integer acelerar(Integer velocidade) {
-		if(velocidade > 110) {
-			return velocidade;
-		}
-		velocidade = velocidade + 10;
-		setVelocidadeAtual(velocidade);
-		return getVelocidadeAtual();
+		if(getMotor() == Motor.LIGADO) {
+			if(velocidade < 110) {
+				velocidade = velocidade + 10;
+				setVelocidadeAtual(velocidade);
+				return getVelocidadeAtual();
+			}
+		}	return getVelocidadeAtual();
+		
 	}
 	
 	public Integer diminuir(Integer velocidade) {
